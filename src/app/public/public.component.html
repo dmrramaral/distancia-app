@@ -1,0 +1,42 @@
+<div class="container">
+    <div class=" rounded container col-8 p-5 b-2" style="background-color: rgba(0, 100, 0, 0.502);">
+        <div style="font-weight: bold; text-align: center; font-size: large;"> Informe a distância entre as cidade e
+            selecione o tipo de transporte</div>
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlInput1" class="form-label form-label">Distância</label>
+            <input type="number" class="form-control form-control-lg " id="distancia"
+                placeholder="Insira a distância somente em número" [(ngModel)]="distancia">
+        </div>
+
+        <select class="form-select form-select-lg mb-3" placeholder="Selecione o tipo de transporte"
+            aria-label=".form-select-lg example" [(ngModel)]="tipoTransporte">
+            <option value="0" selected>Selecione o tipo de transporte</option>
+            <option value="1">Rodoviário</option>
+            <option value="2">Aéreo</option>
+
+        </select>
+
+        <div class="form-check">
+            <input (click)="quantidadeDependente()" class="form-check-input" type="checkbox" value="" id="defaultCheck1" [(ngModel)]="possuiDependente">
+            <label class="form-check-label" for="defaultCheck1">
+              Possui dependente
+            </label>
+          </div>
+
+        <div class="mb-3 mt-3" *ngIf="possuiDependente == true">
+            <label for="exampleFormControlInput1" class="form-label form-label">Dependente</label>
+            <input type="number" class="form-control form-control-lg " id="dependente"
+                placeholder="Insira a quantidade de dependente" [(ngModel)]="dependente">
+        </div>
+
+        <button (click)="calcularValor()" class="btn btn-success">Calcular</button>
+
+        <div *ngIf="showValor" id="campoInformacao" class="rounded p-2 mt-4" style="background-color: rgb(112, 150, 122);font-size: x-large;">
+            <div class="container col-8">O valor da passagem é de <span>{{valor | currency:"BRL" }}</span> </div>
+
+        </div>
+
+    </div>
+
+
+</div>
