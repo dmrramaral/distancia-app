@@ -1,14 +1,13 @@
 <div class="container">
-    <div class=" rounded container col-8 p-5 b-2" style="background-color: rgba(0, 100, 0, 0.502);">
-        <div style="font-weight: bold; text-align: center; font-size: large;"> Informe a distância entre as cidade e
-            selecione o tipo de transporte</div>
+    <div class=" rounded container col-8 col-xl-7 col-sm-12 p-5 b-2" style="background-color: rgba(0, 100, 0, 0.502);">
+        <div style="font-weight: bold; text-align: center; font-size: medium;"> INFORME A DISTÂNCIA ENTRE AS CIDADES E SELECIONE O TIPO DE TRANSPORTE</div>
         <div class="mb-3 mt-3">
             <label for="exampleFormControlInput1" class="form-label form-label">Distância</label>
-            <input type="number" class="form-control form-control-lg " id="distancia"
+            <input type="number" class="form-control form-control-md col-sm-10 " id="distancia"
                 placeholder="Insira a distância somente em número" [(ngModel)]="distancia">
         </div>
 
-        <select class="form-select form-select-lg mb-3" placeholder="Selecione o tipo de transporte"
+        <select class="form-select form-select-md mb-3" placeholder="Selecione o tipo de transporte"
             aria-label=".form-select-lg example" [(ngModel)]="tipoTransporte">
             <option value="0" selected>Selecione o tipo de transporte</option>
             <option value="1">Rodoviário</option>
@@ -23,7 +22,7 @@
             </label>
           </div>
 
-        <div class="mb-3 mt-3" *ngIf="possuiDependente == true">
+        <div class="mb-3 mt-3 col-6" *ngIf="possuiDependente == true">
             <label for="exampleFormControlInput1" class="form-label form-label">Dependente</label>
             <input type="number" class="form-control form-control-lg " id="dependente"
                 placeholder="Insira a quantidade de dependente" [(ngModel)]="dependente">
