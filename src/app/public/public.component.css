@@ -1,0 +1,15 @@
+@media screen and (max-width: 767px) {
+    /* Estilos para telas de telefone */
+
+    #titulo,
+    label,
+    option {
+        font-size: xx-small !important;
+    }
+
+    input::placeholder,
+    select::placeholder {
+        font-size: xx-small !important;
+    }
+
+}
